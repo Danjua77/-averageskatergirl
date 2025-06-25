@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Average Skater Girl Sequence</title>
+    <title>Average Skater Girl</title>
     <!-- Agrega meta viewport para móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -240,8 +240,9 @@
             background: url('azul.png') center center no-repeat;
             background-size: contain;
             border-radius: 12px;
-            box-shadow: 0 2px 12px #178a2c33;
-            transition: box-shadow 0.2s, filter 0.2s;
+            box-shadow: none !important;
+            border: none !important;
+            transition: filter 0.2s;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -315,6 +316,21 @@
             transition: box-shadow 0.13s;
             z-index: 2;
         }
+        .ost-footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100vw;
+            text-align: center;
+            color: #fff;
+            font-size: 1rem;
+            font-family: 'Montserrat', Arial, sans-serif;
+            z-index: 100;
+            padding: 0.5em 0 0.7em 0;
+            pointer-events: none;
+            user-select: none;
+        }
     </style>
 </head>
 <body>
@@ -362,7 +378,7 @@
                 arbolChanTexto.innerHTML = "I'm your final test to find the cache. Literally #FinalBoss.";
                 arbolChanDialogStep = 1;
             } else if (arbolChanDialogStep === 1) {
-                arbolChanTexto.innerHTML = "If you want the next clue, memorize the pattern of my Redbull cans...<br>or tell your mom that the big kids won't give you the clue😂.";
+                arbolChanTexto.innerHTML = "If you want the next clue, memorize the pattern of my Red Bull cans...<br>or tell your mom that the big kids won't give you the clue 😂.";
                 arbolChanDialogStep = 2;
             } else {
                 // Reemplaza el juego de pong por el juego de memoria 4x4
@@ -405,8 +421,9 @@
         background: url('azul.png') center center no-repeat;
         background-size: contain;
         border-radius: 12px;
-        box-shadow: 0 2px 12px #178a2c33;
-        transition: box-shadow 0.2s, filter 0.2s;
+        box-shadow: none !important;
+        border: none !important;
+        transition: filter 0.2s;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -480,6 +497,21 @@
         transition: box-shadow 0.13s;
         z-index: 2;
     }
+    .ost-footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        text-align: center;
+        color: #fff;
+        font-size: 1rem;
+        font-family: 'Montserrat', Arial, sans-serif;
+        z-index: 100;
+        padding: 0.5em 0 0.7em 0;
+        pointer-events: none;
+        user-select: none;
+    }
 </style>
 <div class="memory-bg-fade" id="memory-bg-fade"></div>
 <div class="container">
@@ -487,6 +519,7 @@
     <div id="game-board"></div>
     <button id="start-btn">Start</button>
 </div>
+<div class="ost-footer">OST: \"Level !\" But It's Actually a Soundtrack REMASTERED(1 hour loop) - Dapper Husky</div>
 `;
                 // Lógica del juego de memoria directamente aquí
                 const board = document.getElementById('game-board');
@@ -680,9 +713,9 @@
                                 <div style="display:flex;align-items:flex-end;justify-content:center;gap:2vw;margin-bottom:1.2rem;">
                                     <img src='DonArbolito.png' class='arbol-chan-img' alt='Don Árbol' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
                                     <img src='gymbro.png' class='arbol-chan-img' alt='Gym Bro' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
-                                    <img src='promedio.png' class='arbol-chan-img' alt='Promedio' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
-                                    <img src='abuelo.sama.png' class='arbol-chan-img' alt='Abuelo Sama' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
-                                    <img src='parrishiguana.png' class='arbol-chan-img' alt='Parris Higuana' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
+                                    <img src='promedio.png' class='arbol-chan-img' alt='Average' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
+                                    <img src='abuelo.sama.png' class='arbol-chan-img' alt='Grandpa Sama' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
+                                    <img src='parrishiguana.png' class='arbol-chan-img' alt='Parris Iguana' style='opacity:1;transform:none;height:90px;width:auto;margin-bottom:0;' />
                                 </div>
                                 <div class='arbol-chan-titulo' style='color:#178a2c;margin-bottom:0.7rem;'>Congratulations!</div>
                                 <div class='arbol-chan-texto' style='color:#fff;'></div>
@@ -695,7 +728,7 @@
                             <h2 style='margin-top:0;'>This is the cache location.</h2>
                             <div id='pong-next-img' style='margin:0; padding:0; position:relative; display:flex; align-items:center; justify-content:center;'>
                                 <button id='prev-carrusel' style='position:absolute;left:0;z-index:2;background:rgba(0,0,0,0.3);color:#fff;border:none;font-size:2rem;height:100%;width:40px;cursor:pointer;border-radius:12px 0 0 12px;'>‹</button>
-                                <img id='carrusel-img' src='pista1.jpeg' alt='Pista' style='width:100%;height:100%;object-fit:cover;display:block;border-radius:12px;max-width:300px;max-height:180px;min-width:120px;' />
+                                <img id='carrusel-img' src='pista1.jpeg' alt='Clue' style='width:100%;height:100%;object-fit:cover;display:block;border-radius:12px;max-width:300px;max-height:180px;min-width:120px;' />
                                 <button id='next-carrusel' style='position:absolute;right:0;z-index:2;background:rgba(0,0,0,0.3);color:#fff;border:none;font-size:2rem;height:100%;width:40px;cursor:pointer;border-radius:0 12px 12px 0;'>›</button>
                             </div>
                             <button id='pong-continue' style='font-size:1.3rem;background:#178a2c;color:#fff;border:2px solid #fff;border-radius:8px;padding:0.7rem 2.5rem;font-weight:bold;font-family:Montserrat,Arial,sans-serif;box-shadow:0 2px 8px rgba(0,0,0,0.12);cursor:pointer;margin-top:1.5rem;margin-bottom:2rem;'>Continue</button>
